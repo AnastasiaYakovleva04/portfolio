@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cards-style.css">
+    <style>
+        @media (max-width: 400px) {
+            .title h1 {
+                word-break: break-word;
+                line-height: 1;
+                text-align: right;
+                top: 20px;
+            }
+            .title p {
+                left: 25px;
+            }
+            .rect {
+                margin-right: -50px;
+            }
+        }
+
+    </style>
+    <title>Достижения</title>
+</head>
+<body>
+    <main>
+        <div class="nav">
+            <p class="text nav-arrow">nav</p>
+            <div class="menu">
+                <a class="text" href="../index.html">> main</a>
+                <a class="text" href="about.html">> about</a>
+                <a class="text" href="achievments.html"><span>> achievments</span></a>
+                <a class="text" href="works.html">> works</a>
+                <a class="text" href="documents.html">> documents</a>
+                <a class="text" href="patriot.html">> patriot</a>
+            </div>
+        </div>
+
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+
+        <div class="title-block">
+            <div class="title">
+                <div class="rect"></div>
+                <p class="small-text">достижения</p>
+                <h1>Achievments</h1>
+            </div>
+        </div>
+
+        <p class="text" id="top">дипломы</p>
+        <p class="text" id="bot">сертификаты</p>
+
+        <p class="text" id="left-bottom">? наград</p>
+        <p class="text" id="right-bottom">3 курс</p>
+    </main>
+    
+    <section class="section-cards">
+        <!-- подгружается из js
+        <div class="card">
+            <img src="../img/achievments/1course_npk_may24.jpg" alt="npk_may24" style="modal-img">
+            <div class="description">
+                <p class="smallest-text">диплом I степени<br>
+                    нпк, 2024</p>
+                <a href="#" class="smallest-text btn">[работа]</a>
+            </div>
+        </div> -->
+    </section>
+
+    <footer>
+        <div class="contacts">
+            <p class="small-text">nastasiakovleva@gmail.com</p>
+            <p class="small-text">8 (922) 763-85-86</p>
+        </div>
+        <div class="social">
+            <a href="https://t.me/nnstessee" class="social-icon tg"></a>
+            <a href="https://www.behance.net/nnstessee" class="social-icon bh"></a>
+        </div>
+    </footer>
+
+    <div class="modal">
+        <img src="" alt="img" id="modal-image">
+    </div>
+
+    <script src="../js/animation-script.js"></script>
+    <script src="../js/menu-script.js"></script>
+    <script src="../js/data.js"></script>
+    <script src="../js/modal-window-script.js"></script>
+    <script src="../js/load-cards-script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadCards('.section-cards', '#left-bottom', achievments, {
+                itemType: "награда",
+                path: "../img/achievments/",
+            });
+        });
+    </script>
+</body>
+</html>

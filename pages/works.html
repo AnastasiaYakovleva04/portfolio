@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/projects-style.css">
+    <title>Работы</title>
+</head>
+<body>
+    <main>
+        <div class="nav">
+            <p class="text nav-arrow">nav</p>
+            <div class="menu">
+                <a class="text" href="../index.html">> main</a>
+                <a class="text" href="about.html">> about</a>
+                <a class="text" href="achievments.html">> achievments</a>
+                <a class="text" href="works.html"><span>> works</span></a>
+                <a class="text" href="documents.html">> documents</a>
+                <a class="text" href="patriot.html">> patriot</a>
+            </div>
+        </div>
+
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+
+        <div class="title-block">
+            <div class="title">
+                <div class="rect"></div>
+                <p class="small-text">работы</p>
+                <h1>Works</h1>
+            </div>
+        </div>
+
+        <p class="text" id="top">сайты</p>
+        <p class="text" id="bot">приложения</p>
+
+        <p class="text" id="left-bottom">? проектов</p>
+        <p class="text" id="right-bottom">3 курс</p>
+    </main>
+    
+    <section class="section-works">
+        <!-- <div class="panel">
+            <h2>Visual Novel</h2>
+             <div class="content">
+                <div class="work-details">
+                    <img src="../img/works/visual_novel.png" alt="img" class="modal-img">
+                    <div class="details">
+                        <p class="small-text">разработано на движке renpy, python</p>
+                        <a class="small-text btn" href="#">[яндекс диск]</a>
+                    </div>
+                </div>
+                <div class="work-desc">
+                    <p class="big-text">разработка компьютерных игр в жанре визуальных новелл</p>
+                    <p class="text">desktop визуальная новелла по мотивам “Капитанской дочки” Пушкина с альтернативными событиями второй главы. первый большой индивидуальный проект на 1 курсе: совмещает в себе иллюстрации, анимации, музыку и код</p>
+                    <p class="small-text date">февраль-апрель 2024</p>
+                </div>
+            </div>
+        </div> -->
+    </section>
+
+    <footer>
+        <div class="contacts">
+            <p class="small-text">nastasiakovleva@gmail.com</p>
+            <p class="small-text">8 (922) 763-85-86</p>
+        </div>
+        <div class="social">
+            <a href="https://t.me/nnstessee" class="social-icon tg"></a>
+            <a href="https://www.behance.net/nnstessee" class="social-icon bh"></a>
+        </div>
+    </footer>
+
+    <div class="modal">
+        <img src="" alt="img" id="modal-image">
+    </div>
+
+    <script src="../js/animation-script.js"></script>
+    <script src="../js/menu-script.js"></script>
+    <script src="../js/data.js"></script>
+    <script src="../js/modal-window-script.js"></script>
+    <script src="../js/load-cards-script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadCards('.section-works', '#left-bottom', works, {
+                itemType: "проект",
+                path: "../img/works/",
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/projects-style.css">
+    <link rel="stylesheet" href="../css/cards-style.css">
+    <link rel="stylesheet" href="../css/patriot-style.css">
+    <title>Я гражданин</title>
+</head>
+<body>
+    <main>
+        <div class="nav">
+            <p class="text nav-arrow">nav</p>
+            <div class="menu">
+                <a class="text" href="../index.html">> main</a>
+                <a class="text" href="about.html">> about</a>
+                <a class="text" href="achievments.html">> achievments</a>
+                <a class="text" href="works.html">> works</a>
+                <a class="text" href="documents.html">> documents</a>
+                <a class="text" href="patriot.html"><span>> patriot</span></a>
+            </div>
+        </div>
+
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+
+        <div class="title-block">
+            <div class="title">
+                <div class="rect"></div>
+                <p class="small-text">я гражданин</p>
+                <h1>Patriot</h1>
+            </div>
+        </div>
+
+        <p class="text" id="top">жизнь</p>
+        <p class="text" id="bot">важное</p>
+
+        <p class="text" id="left-bottom">? проектов</p>
+        <p class="text" id="right-bottom">3 курс</p>
+    </main>
+    
+    <section class="section-works">
+        <!-- подгружается из js -->
+    </section>
+    <section class="section-cards">
+        <!-- подгружается из js -->
+    </section>
+    <div class="section-moments">
+
+    </div>
+
+    <footer>
+        <div class="contacts">
+            <p class="small-text">nastasiakovleva@gmail.com</p>
+            <p class="small-text">8 (922) 763-85-86</p>
+        </div>
+        <div class="social">
+            <a href="https://t.me/nnstessee" class="social-icon tg"></a>
+            <a href="https://www.behance.net/nnstessee" class="social-icon bh"></a>
+        </div>
+    </footer>
+
+    <div class="modal">
+        <img src="" alt="img" id="modal-image">
+    </div>
+
+    <script src="../js/animation-script.js"></script>
+    <script src="../js/menu-script.js"></script>
+    <script src="../js/data.js"></script>
+    <script src="../js/modal-window-script.js"></script>
+    <script src="../js/load-cards-script.js"></script>
+    <script src="../js/carousel-script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadCards('.section-works', '#left-bottom', projects, {
+                itemType: "проект",
+                path: "../img/patriot/works/",
+                header: "search_projects.citizen",
+                system: "проекты особой важности"
+            });
+
+            loadCards('.section-cards', null, awards, {
+                itemType: "награда",
+                path: "../img/patriot/awards/",
+                header: "load_awards.citizen",
+                system: "олимпиады, конкурсы, викторины"
+            });
+
+            loadCards('.section-moments', null, moments, {
+                itemType: "событие",
+                path: "../img/patriot/moments/",
+                header: "living_moments.citizen",
+                system: "театры, музеи, защиты"
+            });
+
+            initCarousel();
+        });
+    </script>
+</body>
+</html>

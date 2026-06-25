@@ -1,0 +1,196 @@
+main img{
+    height: 100%;
+    grid-column: 2/8;
+    position: absolute;
+    right: 0;
+    mix-blend-mode: lighten;
+    pointer-events: none;
+}
+
+#is{
+    text-align: right;
+    align-self: end;
+    color: #635766;
+}
+
+
+.section-competencies{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(60px, 1fr));
+    grid-template-rows: repeat(8, minmax(60px, 1fr));
+}
+
+.competencies-container {
+    grid-row: 3/8;
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.system-header{
+    grid-row: 1;
+    grid-column: 1/-1;
+}
+
+.section-pc, .section-ok{
+    min-width: 50%;
+    max-width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.section-ok{
+    min-width: 45%;
+    max-width: 65%;
+    text-align: right;
+}
+.section{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+hr{
+    width: 100%;
+    height: 1px;
+    background-color: #635766;
+    border: none;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 34px 30px;
+    align-items: flex-end;
+}
+.section-ok .list{
+    justify-content: right;
+}
+
+.list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.05s ease;
+    position: relative;
+}
+
+.marker {
+    width: 1px;
+    height: 50px;
+    background-color: #635766;
+    margin-bottom: 8px;
+    transition: all 0.05s ease;
+}
+.section-pc .marker {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #635766;
+}
+
+.list-item:hover .marker {
+    background-color: #EFF1F3;
+    box-shadow: 0 0 10px #8A6DE9;
+}
+.section-pc .list-item:hover .marker {
+    width: 12px;
+    height: 12px;
+}
+
+.list-item .code {
+    color: #635766;
+    transition: color 0.05s;
+}
+.list-item:hover .code {
+    color: #EFF1F3;
+}
+
+.terminal-panel {
+    grid-row: 9;
+    grid-column: 1/-1;
+    border-left: 2px solid #8A6DE9;
+    padding: 20px 30px;
+    color: #EFF1F3;
+    min-height: 130px;  
+    box-sizing: border-box;
+}
+.terminal-line {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+}
+.prompt {
+    color: #8A6DE9;
+}
+
+.competence-output {
+    color: #EFF1F3;
+    word-break: break-word;
+}
+
+.cursor {
+    width: 10px;
+    height: 20px;
+    background-color: #8A6DE9;
+    margin-left: 5px;
+    animation: blink 1.2s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@media (max-width: 768px){
+    main img{
+        grid-column: 1/-1;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        top: 20%;
+    }
+    #is{
+        width: 58%;
+        position: absolute;
+        bottom: -75px;
+    }
+    .terminal-panel{
+        grid-row: 12;
+        height: auto;
+        min-height: auto;
+        padding: 10px;
+        
+    }
+    .section-competencies{
+        grid-template-columns: repeat(4,  minmax(75px, 1fr));
+        grid-template-rows: repeat(11,  minmax(75px, 1fr)) auto;
+    }
+    .section-pc, .section-ok{
+        min-width: 60%;
+        max-width: 85%;
+        gap: 10px;
+    } 
+    .competencies-container {
+        grid-row: 3/11;
+        margin-top: 30px;
+    }
+    .list {
+        gap: 25px 20px;
+    }
+}
+@media (max-width: 400px){
+    #is{
+        width: 65%;
+    }
+    
+}
+@media (max-width: 320px){
+    #is{
+        width: 75%;
+    }
+}

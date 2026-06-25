@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main-style.css">
+    <title>Главная</title>
+</head>
+<body>
+    <main>
+        <div class="nav">
+            <p class="text nav-arrow">nav</p>
+            <div class="menu">
+                <a class="text" href="index.html"><span>> main</span></a>
+                <a class="text" href="./pages/about.html">> about</a>
+                <a class="text" href="./pages/achievments.html">> achievments</a>
+                <a class="text" href="./pages/works.html">> works</a>
+                <a class="text" href="./pages/documents.html">> documents</a>
+                <a class="text" href="./pages/patriot.html">> patriot</a>
+            </div>
+        </div>
+        
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        
+        <img id="main-photo" src="./img/main photo.png" alt="Anastasia"/>
+
+        <div class="title-block">
+            <div class="title">
+                <div class="rect"></div>
+                <p class="small-text">Яковлева Анастасия, ПР-31</p>
+                <h1>Portfolio</h1>
+            </div>
+            <p class="small-text" id="is">информационные системы и программирование</p>
+        </div>
+
+        <p class="text" id="top">programmer</p>
+        <p class="text" id="bot">designer</p>
+
+        <p class="text" id="left-bottom">ГАПОУ СО ЕКТС</p>
+        <p class="text" id="right-bottom">министерство образования свердловской области</p>
+    </main>
+
+    <section class="section-competencies">
+        <div class="system-header">
+            <p class="text">> initiate skillset.exe</p>
+            <p class="text">> competencies.config</p>
+            <p class="text">SYSTEM: общие и профессиональные компетенции освоены</p>
+        </div>
+
+        <div class="competencies-container" id="competenciesContainer">
+            <!-- сюда из js подгружаются ок и пк  -->
+        </div>
+
+        <div class="terminal-panel glass-panel" id="terminal">
+            <div class="terminal-line">
+                <span class="prompt text">></span>
+                <span class="competence-output text">Выберите компетенцию_</span>
+                <span class="cursor"></span>
+            </div>
+        </div>
+    </section> 
+
+    <footer>
+        <div class="contacts">
+            <p class="small-text">nastasiakovleva@gmail.com</p>
+            <p class="small-text">8 (922) 763-85-86</p>
+        </div>
+        <div class="social">
+            <a href="https://t.me/nnstessee" class="social-icon tg"></a>
+            <a href="https://www.behance.net/nnstessee" class="social-icon bh"></a>
+        </div>
+    </footer> 
+
+    <script src="./js/animation-script.js"></script>
+    <script src="./js/menu-script.js"></script>
+    <script src="./js/competencies-script.js"></script>
+    <script src="./js/hint-script.js"></script>
+    <script>hint('.section-competencies', "[system] меню скрыто. наведите в левый верхний угол, чтобы открыть")</script>
+</body>
+</html>

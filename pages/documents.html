@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cards-style.css">
+    <title>Документы</title>
+</head>
+<body>
+    <main>
+        <div class="nav">
+            <p class="text nav-arrow">nav</p>
+            <div class="menu">
+                <a class="text" href="../index.html">> main</a>
+                <a class="text" href="about.html">> about</a>
+                <a class="text" href="achievments.html">> achievments</a>
+                <a class="text" href="works.html">> works</a>
+                <a class="text" href="documents.html"><span>> documents</span></a>
+                <a class="text" href="patriot.html">> patriot</a>
+            </div>
+        </div>
+
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+
+        <div class="title-block">
+            <div class="title">
+                <div class="rect"></div>
+                <p class="small-text">документы</p>
+                <h1>Documents</h1>
+            </div>
+        </div>
+
+        <p class="text" id="top">обучение</p>
+        <p class="text" id="bot">интенсивы</p>
+
+        <p class="text" id="left-bottom">? сертификатов</p>
+        <p class="text" id="right-bottom">2 школы дизайна</p>
+    </main>
+    
+    <section class="section-cards">
+            <!-- <div class="card">
+                <img src="../img/docs/certificate_des_apr25.png" alt="doc" class="modal-img">
+                <p class="smallest-text">диплом I степени<br>
+                    нпк, 2024</p>
+            </div> -->
+    </section>
+
+    <footer>
+        <div class="contacts">
+            <p class="small-text">nastasiakovleva@gmail.com</p>
+            <p class="small-text">8 (922) 763-85-86</p>
+        </div>
+        <div class="social">
+            <a href="https://t.me/nnstessee" class="social-icon tg"></a>
+            <a href="https://www.behance.net/nnstessee" class="social-icon bh"></a>
+        </div>
+    </footer>
+
+    <div class="modal">
+        <img src="" alt="img" id="modal-image">
+    </div>
+
+    <script src="../js/animation-script.js"></script>
+    <script src="../js/menu-script.js"></script>
+    <script src="../js/modal-window-script.js"></script>
+    <script src="../js/load-cards-script.js"></script>
+    <script src="../js/data.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadCards('.section-cards', '#left-bottom', documents, {
+                itemType: "сертификат",
+                path: "../img/docs/",
+            });
+        });
+    </script>
+
+</body>
+</html>
