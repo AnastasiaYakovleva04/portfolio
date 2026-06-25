@@ -62,8 +62,8 @@ function loadCards(containerSelector, countsSelector, items, options = {}){
             }).join('');
 
             const bgImage = isMobile 
-            ? `../../img/backgrounds/${imgType}-${index}-mob.png` 
-            : `../../img/backgrounds/${imgType}-${index}.png`;
+            ? `../img/backgrounds/${imgType}-${index}-mob.png` 
+            : `../img/backgrounds/${imgType}-${index}.png`;
 
             content += 
         `<div ${item.id ? `id="${item.id}"` : ``}  class="panel" style="background-image: url('${bgImage}');">

@@ -6,15 +6,15 @@
 
 @font-face {
     font-family: 'Orbitron';
-    src: url('../../fonts/Orbitron.ttf');
+    src: url('../fonts/Orbitron.ttf');
 }
 @font-face {
     font-family: 'SF Pro Display';
-    src: url('../../fonts/SF-Pro-Display-Regular.otf');
+    src: url('../fonts/SF-Pro-Display-Regular.otf');
 }
 @font-face {
     font-family: 'Consolas';
-    src: url('../../fonts/consolas.ttf');
+    src: url('../fonts/consolas.ttf');
 }
 
 body{
@@ -34,7 +34,7 @@ body::before{
     height: 100%;
     top: 0;
     left: 0;
-    background-image: url('../../img/backgrounds/noise.png');
+    background-image: url('../img/backgrounds/noise.png');
     opacity: 0.1;
     mix-blend-mode: soft-light;
     background-repeat: repeat;
@@ -240,17 +240,17 @@ footer{
     height: 56px;
 }
 .tg {
-    background: url('../../img/icons/status=Default, media=Telegram.png') no-repeat center/contain;
+    background: url('../img/icons/status=Default,media=Telegram.png') no-repeat center/contain;
 }
 .tg:hover {
-    background: url('../../img/icons/status=Hover\,\ media=Telegram.png') no-repeat center/contain;
+    background: url('../img/icons/status=Hover,media=Telegram.png') no-repeat center/contain;
 }
 .bh {
-    background: url('../../img/icons/status=Default, media=Behance.png') no-repeat center/contain;
+    background: url('../img/icons/status=Default,media=Behance.png') no-repeat center/contain;
 }
 
 .bh:hover {
-    background: url('../../img/icons/status=Hover\,\ media=Behance.png') no-repeat center/contain;
+    background: url('../img/icons/status=Hover,media=Behance.png') no-repeat center/contain;
 }
 
 
