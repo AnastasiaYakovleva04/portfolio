@@ -826,9 +826,12 @@ h4{
         left: 53%;
         top: 16%;
     }
-        .city:nth-child(9) {
+    .city:nth-child(9) {
         left: 40%;
         top: 83%;
         text-align: left;
+    }
+    .map-panel h2 {
+        right: 10%;
     }
 }

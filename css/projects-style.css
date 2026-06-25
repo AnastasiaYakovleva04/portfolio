@@ -167,3 +167,15 @@
         gap: 20px;
     }
 }
+@media (max-width: 400px) {
+    .panel:nth-child(2) h2 {
+        right: auto;
+        left: 5%;
+    }
+    .links{
+        gap: 5px !important;
+    }
+    .work-details img{
+        max-height: fit-content;
+    }
+}

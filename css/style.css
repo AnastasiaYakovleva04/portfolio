@@ -437,8 +437,3 @@ footer{
         padding-left: 15px;
     }
 }
-@media (max-width: 400px){
-    #left-bottom{
-       grid-column: 1; 
-    }
-}
