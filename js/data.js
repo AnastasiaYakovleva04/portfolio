@@ -119,6 +119,16 @@ const works = [
         link: "https://github.com/AnastasiaYakovleva04/yakovleva-zd7-v3 | https://disk.yandex.ru/d/YvA_C6PDZrkZHQ",
     },
     {
+        img: "carsharing_site.jpg", 
+        title: "Carsharing Site", 
+        name: "разработка сайта для каршеринговой компании", 
+        desc: "многостраничный сайт для аренды автомобилей с личным кабинетом, системой бронирования, фильтрацией и поиском по каталогу и динамический расчет стоимости аренды. личный кабинет с историей поездок, начислением баллов, привязкой банковских карт и автоматическим переносом завершенных броней в историю. регистрация, авторизация и хранение данных через localStorage. адаптивная верстка для десктопа и мобильных устройств",
+        date: "январь, июнь 2026",
+        stack: "разработка на html, css, js", 
+        host: "git hub | сайт",
+        link: "https://github.com/AnastasiaYakovleva04/carsharing-site.git | https://anastasiayakovleva04.github.io/carsharing-site/",
+    },
+    {
         img: "console_tetris.jpg", 
         title: "Console Tetris", 
         name: "разработка консольной игры тетрис", 
