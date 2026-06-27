@@ -4,49 +4,66 @@ function initCarousel(){
     const prevBtn = document.querySelector('.prev-btn');
     const nextBtn = document.querySelector('.next-btn');
         
-    const visibleCards = 3; //видимые карточки
-    let currentIndex = 0; //индекс текущей (первой) видимой карточки
-    const totalCards = cards.length; //всего карточек
+    const totalCards = cards.length;
+    let currentIndex = 0;
+    let visibleCards = 3;
     
-    //обновление позиции карусели
-    function updateCarousel() {
-
-        let cardWidth = cards[0].offsetWidth + 20; //ширина + gap
-        let translateX = -currentIndex * cardWidth; //сдвиг карусели влево
-            
-        carousel.style.transform = `translateX(${translateX}px)`;
-            
-        //прокрутка
-        if (currentIndex >= totalCards) {
-            currentIndex = 0;
-            carousel.style.transform = `translateX(0)`;
-            
-            //анимация
-            setTimeout(() => {
-            carousel.style.transition = 'transform 0.5s ease-in-out';
-            }, 50);
+    // функция для определения количества видимых карточек в зависимости от ширины
+    function getVisibleCards() {
+        if (window.innerWidth <= 768) {
+            return 1;
         }
+        return 3;
+    }
+    
+    // обновление позиции карусели
+    function updateCarousel() {
+        visibleCards = getVisibleCards();
+        let cardWidth = cards[0].offsetWidth + 20; // ширина + gap
+        let translateX = -currentIndex * cardWidth;
+            
+        carousel.style.transition = 'transform 0.5s ease-in-out';
+        carousel.style.transform = `translateX(${translateX}px)`;
     }
         
-    //прокрутка вперед
+    // прокрутка вперед
     function nextSlide() {
-        if (currentIndex < totalCards - visibleCards)
-            currentIndex++; 
-        else 
+        visibleCards = getVisibleCards();
+        const maxIndex = totalCards - visibleCards;
+        
+        if (currentIndex < maxIndex) {
+            currentIndex++;
+        } else {
             currentIndex = 0;
+        }
         updateCarousel();
     }
         
-        //прокрутка назад
+    // прокрутка назад
     function prevSlide() {
-        if (currentIndex > 0)
+        visibleCards = getVisibleCards();
+        const maxIndex = totalCards - visibleCards;
+        
+        if (currentIndex > 0) {
             currentIndex--;
-        else 
-            currentIndex = totalCards - visibleCards;
+        } else {
+            currentIndex = maxIndex;
+        }
         updateCarousel();
     }
         
-    //обработчики кнопок
+    // обработчики кнопок
     nextBtn.addEventListener('click', nextSlide);
     prevBtn.addEventListener('click', prevSlide);
+    
+    // обновление при изменении размера окна
+    window.addEventListener('resize', function() {
+        // корректируем currentIndex, если он вышел за пределы
+        visibleCards = getVisibleCards();
+        const maxIndex = totalCards - visibleCards;
+        if (currentIndex > maxIndex) {
+            currentIndex = maxIndex;
+        }
+        updateCarousel();
+    });
 }
